@@ -1,0 +1,484 @@
+@import 'colors';
+@import 'animate';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+	background-color: $bg-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 100px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+h2 {
+	font-size: 35px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+nav {
+	text-transform: uppercase;
+	z-index: 1;
+	transition: background-color 0.6s;
+
+	.navbar-img {
+		height: 82px;
+		border-radius: 20px;
+	}
+	.nav-link,
+	a,
+	i {
+		color: $second-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.nav-link:hover,
+	a:hover {
+		color: $main-color;
+	}
+
+	.active {
+		color: $main-color;
+	}
+}
+
+header {
+	color: $second-color;
+
+	h1 {
+		font-size: 24px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.hero-container {
+		position: relative;
+		position: sticky;
+		background-image: url('../img/interior-small.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 100vh;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -1;
+	}
+
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 3;
+	}
+
+	.color-text {
+		color: $main-color;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		font-size: 30px;
+		bottom: 20px;
+		left: 50%;
+		transform: translate(-50%);
+		color: $main-color;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 22px;
+		font-weight: bold;
+	}
+
+	.aboutus-hover {
+		transition: color 0.4s;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+
+	.aboutus-card-text {
+		margin-top: 10px;
+		text-align: justify;
+		padding: 10px;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	height: 70vh;
+	background-image: url('../img/office-small.jpg');
+	background-position: center;
+	background-size: cover;
+	color: $second-color;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+
+	.dev-offer-box {
+		position: absolute;
+		background-color: #fff;
+
+		padding: 20px;
+		width: 800px;
+		height: 300px;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 10px;
+
+		.dev-offer {
+			margin-top: 20px;
+			color: #000;
+			text-align: justify;
+		}
+	}
+	.aboutus-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	nav {
+		.navbar-img {
+			height: 45px;
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 56px;
+		}
+
+		p {
+			font-size: 26px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 80px;
+		}
+
+		p {
+			font-size: 50px;
+		}
+	}
+}
+
+.prices {
+	.price-box {
+		margin: 20px 10px;
+		padding: 30px;
+		background-color: white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		border-radius: 10px;
+		transition: transform 0.3s;
+
+		h3 {
+			color: $main-color;
+			text-transform: uppercase;
+		}
+
+		span {
+			font-weight: bold;
+		}
+
+		i {
+			padding: 0 5px;
+			font-size: 24px;
+		}
+
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+
+		.price-tag {
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+
+	.price-info {
+		margin-top: 30px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.achievement {
+	i {
+		padding: 10px;
+		font-size: 40px;
+		color: $second-color;
+		text-shadow: 0 0 5px #000;
+	}
+
+	.achievements-list {
+		padding: 20px 0;
+	}
+
+	.achievement-number {
+		font-size: 22px;
+	}
+
+	.achievement-text {
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+}
+
+.carousel-box {
+	width: 1800px;
+	height: 100%;
+	position: relative;
+	margin: 50px auto;
+	overflow: hidden;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	z-index: 0;
+}
+
+.contact {
+	position: relative;
+	background-image: url(/img/pexels-adam-borkowski-6425537.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+
+	h2 {
+		color: $second-color;
+		font-weight: bold;
+	}
+
+	.underline {
+		background-color: $bg-color;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 9, 27, 0.7);
+		z-index: -5;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: white;
+
+		.contact-item {
+			margin: 30px 0;
+
+			h3 {
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			.social-media {
+				font-size: 26px;
+
+				a {
+					padding: 10px;
+					color: white;
+				}
+
+				a:hover {
+					color: yellow;
+				}
+			}
+		}
+	}
+}
+
+.wrapper {
+	width: 1800px;
+	height: 900px;
+	position: relative;
+	margin: 20px auto;
+	top: 50%;
+	transform: translate(-50%, -50%, 0);
+	overflow: hidden;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Our image information */
+.before,
+.after {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.content-image {
+	height: 100%;
+}
+
+.after {
+	width: 125px;
+}
+
+.scroller {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 100px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	background-color: transparent;
+	opacity: 0.9;
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.scroller:hover {
+	opacity: 1;
+}
+
+.scrolling {
+	pointer-events: none;
+	opacity: 1;
+	// z-index: 1;
+}
+
+.scroller__thumb {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+}
+
+.scroller:before,
+.scroller:after {
+	content: ' ';
+	display: block;
+	width: 7px;
+	height: 9999px;
+	position: absolute;
+	left: 50%;
+	margin-left: -3.5px;
+	z-index: 30;
+	transition: 0.1s;
+}
+.scroller:before {
+	top: 100%;
+}
+.scroller:after {
+	bottom: 100%;
+}
+
+/* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+.scroller {
+	border: 5px solid #fff;
+}
+.scroller:before,
+.scroller:after {
+	background: #fff;
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+
+	.aboutus-hero {
+		background-image: url('../img/office-big.jpg');
+	}
+
+	.prices {
+		.price-info {
+			font-size: 28px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-container {
+			background-image: url('../img/interior-big.jpg');
+		}
+	}
+}
